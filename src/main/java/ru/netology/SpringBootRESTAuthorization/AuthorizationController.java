@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -19,8 +18,7 @@ public class AuthorizationController {
 
     @GetMapping("authorize")
     public List<Authorities> getAuthorities(@RequestParam("user") String user,
-                                            @RequestParam("password") String password)
-            throws InvalidCredentials, IOException {
+                                            @RequestParam("password") String password){
         return service.getAuthorities(user, password);
     }
 }
