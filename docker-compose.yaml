@@ -1,0 +1,6 @@
+version: "3.7"
+services:
+  authorization:
+    build: .
+    ports:
+    - "10000:8080"
